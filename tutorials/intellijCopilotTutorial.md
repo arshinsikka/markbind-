@@ -5,7 +5,6 @@ pageNav: 2
 
 # IntelliJ IDEA – Using GitHub Copilot
 
-
 GitHub Copilot is an AI-powered code assistant that helps you write, test, and refactor code faster. In this tutorial, you’ll learn how to set up and use Copilot in IntelliJ IDEA — perfect for students in CS2103/T, CS2113, and other Java-heavy modules.
 
 <box type="info" seamless>
@@ -18,7 +17,6 @@ To use GitHub Copilot for free as a student, you must:
 This guide walks you through setting up Copilot access and using it in IntelliJ IDEA.
 </box>
 
-
 ---
 
 ## 1. Setting Up GitHub Copilot Access
@@ -29,7 +27,7 @@ This guide walks you through setting up Copilot access and using it in IntelliJ 
 2. Fill in only your billing address (no charges will occur if you qualify for student access).  
 3. Click **Save billing information**.
 
-<pic src="images/intellij-copilot/billing-info.png" width="450" />
+<img src="images/intellijcopilot/copilot-billing-settings.jpeg" alt="GitHub Billing Settings" width="60%" />
 
 ### Step 2: Enable Two-Factor Authentication (2FA)
 
@@ -37,7 +35,7 @@ This guide walks you through setting up Copilot access and using it in IntelliJ 
 2. Click **Enable two-factor authentication** and follow the prompts.  
 3. Use an authenticator app (e.g., Google Authenticator, Microsoft Authenticator) to complete setup.
 
-<pic src="images/intellij-copilot/2fa-setup.png" width="400" />
+<img src="images/intellijcopilot/github-2fa-settings.jpeg" alt="2FA Settings Page" width="60%" />
 
 ### Step 3: Link Your University Email
 
@@ -51,7 +49,7 @@ This guide walks you through setting up Copilot access and using it in IntelliJ 
 2. Click **Get student benefits** and complete the application.  
 3. After approval, you’ll see a message like “You already have the Student Developer Pack.”
 
-<pic src="images/intellij-copilot/student-pack-confirmed.png" width="500" />
+<img src="images/intellijcopilot/copilot-education-pack.jpeg" alt="Student Pack Confirmation" width="60%" />
 
 ---
 
@@ -61,10 +59,16 @@ This guide walks you through setting up Copilot access and using it in IntelliJ 
 2. On Mac: **IntelliJ IDEA > Preferences**. On Windows/Linux: **File > Settings**.  
 3. Select **Plugins > Marketplace**.  
 4. Search for **GitHub Copilot**.  
+<img src="images/intellijcopilot/intellij-search-copilot.png" alt="Search GitHub Copilot Plugin" width="60%" />
+<box type="tip" seamless>
+Ensure your IntelliJ version supports GitHub Copilot (v2022.3+ recommended).
+</box>
 5. Click **Install**, then **Restart IDE** when prompted.
+<box type="tip" seamless>
+You must restart IntelliJ IDEA after installation for Copilot to be enabled.
+</box>
+<img src="images/intellijcopilot/intellij-restart-prompt.png" alt="Restart Prompt" width="60%" />
 
-<pic src="images/intellij-copilot/plugin-marketplace.png" width="500" />  
-<pic src="images/intellij-copilot/plugin-installed-popup.png" width="500" />
 
 ---
 
@@ -75,7 +79,7 @@ This guide walks you through setting up Copilot access and using it in IntelliJ 
 3. Sign in via your browser and authorize Copilot.  
 4. Your GitHub username should appear in the **Preferred GitHub account** dropdown.
 
-<pic src="images/intellij-copilot/copilot-settings.png" width="600" />
+<img src="images/intellijcopilot/intellij-copilot-settings.png" alt="Copilot Settings in IntelliJ" width="60%" />
 
 ---
 
@@ -92,8 +96,8 @@ This guide walks you through setting up Copilot access and using it in IntelliJ 
 
 4. Press Tab to accept the suggestion.
 
-<pic src="images/intellij-copilot/suggestion-visible.png" width="600" />  
-<pic src="images/intellij-copilot/suggestion-accepted.png" width="600" />
+<img src="images/intellijcopilot/copilot-suggestion-visible.png" alt="Copilot Suggestion Appears" width="60%" />
+<img src="images/intellijcopilot/copilot-accepted-fixed.png" alt="Copilot Suggestion Example" width="60%" />
 
 <box type="tip" seamless>
 Copilot works best with clear, descriptive comments.
@@ -112,7 +116,7 @@ Write a function to reverse a string in Java.
 
 3. Review the response and insert code as needed.
 
-<pic src="images/intellij-copilot/copilot-chat-window.png" width="600" />
+<img src="images/intellijcopilot/copilot-chat-window.png" alt="Copilot Chat Window" width="60%" />
 
 ---
 
