@@ -140,27 +140,41 @@ tasks.test {
 
 ## Writing the First JUnit Test
 
-**Add a test class**, while following [the conventions given earlier in this page](#conventions-to-follow). If you don't follow those conventions, Gradle will not be able to find your test class. For example, if you have a class `src\main\java\seedu\duke\Todo.java`, you can add a test class `src\`==test==`\java\seedu\duke\`==TodoTest.java==. Here's some sample code:
+**Add a class and a matching test**, while following [the conventions given earlier in this page](#conventions-to-follow).  
+Here’s a minimal working example:
 
-```java{.line-numbers highlight-lines="8,13", heading="src\test\java\seedu\duke\TodoTest.java"}
-package seedu.duke;  //same package as the class being tested
+```java {heading="src/main/java/example/Calculator.java"}
+package example;
 
-import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
-public class DukeTest {
-    @Test
-    public void dummyTest(){
-        assertEquals(2, 2);
-    }
-
-    @Test
-    public void anotherDummyTest(){
-        assertEquals(4, 4);
+public class Calculator {
+    public int add(int a, int b) {
+        return a + b;
     }
 }
 ```
+
+```java
+package example;
+
+import org.junit.jupiter.api.*;
+
+class CalculatorTest {
+
+    Calculator c;
+
+    @BeforeEach
+    void setUp() {
+        c = new Calculator();
+    }
+
+    @Test
+    void add_twoNumbers_returnsSum() {
+        Assertions.assertEquals(5, c.add(2, 3));
+    }
+}
+```
+
+**Run tests**, either using the Intellij UI (preferred -- this makes debugging failed test cases easier) or using Gradle itself, as explained in the section below.
 
 </div>
 
