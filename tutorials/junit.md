@@ -244,8 +244,8 @@ Switch if one runner can’t discover tests. Then **Reload All Gradle Projects**
 1. Right‑click a test or class and choose **Run '…' with Coverage** (or use the gutter coverage icon).
 2. Open the **Coverage** tool window to view line coverage and navigate to uncovered lines.
 
-<pic src="images/junit/run-with-coverage.png" />
-<pic src="images/junit/coverage-tool-window.png" />
+<pic src="images/junit/run-with-coverage.png" width="60%" />
+<pic src="images/junit/coverage-tool-window.png" width="60%" />
 
 <box type="info" seamless>
 If you run via Gradle, HTML reports (when enabled) appear at  
