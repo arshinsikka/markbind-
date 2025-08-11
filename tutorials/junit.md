@@ -210,6 +210,20 @@ Switch if one runner can’t discover tests. Then **Reload All Gradle Projects**
 
 <!-- ======================================================== -->
 
+<div id="debugging-tests">
+
+## Debugging Tests (IntelliJ)
+
+1. Open a test file and **click in the gutter** to set a breakpoint.
+2. Click the **bug icon** (or right‑click the test/class → **Debug '…'**).
+3. Use the debug toolbar to **Step Over (F8)**, **Step Into (F7)**, and **Resume (F9)**.
+4. Hover variables to inspect values or use **Evaluate Expression** (`Alt/Option+F8`).
+
+</div>
+
+
+<!-- ======================================================== -->
+
 <div id="useful-test-cases">
 
 ## Writing Useful JUnit Tests
