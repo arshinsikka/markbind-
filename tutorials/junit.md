@@ -71,50 +71,63 @@ Here are the conventions to follow, when using JUnit in a Gradle project:
 </box>
 
 
+<div id="add-junit-to-gradle">
+
 ## Configuring Gradle for JUnit
 
-Update the `build.gradle` file to include JUnit as a dependency. Here are the relevant lines that needs to be in the `build.gradle` (change the version number as necessary):
+Add JUnit 5 (Jupiter) to your **Gradle** project with the minimal, copy‑pasteable setup below.  
+This is all you need to compile and run JUnit tests.
 
-**First, ensure the Java plugin is included**:
+**Minimum `build.gradle` (Groovy)**
 
 ```groovy {heading="build.gradle"}
 plugins {
-    id 'java'
+  id 'java'
 }
-```
 
-**Next add the following JUnit dependencies** to the `dependencies` block, to tell which JUnit libraries to be used:
+repositories {
+  mavenCentral()
+}
 
-```groovy {highlight-lines="2-3", heading="build.gradle"}
 dependencies {
-    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.10.0'
-    testRuntimeOnly group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.10.0'
+  // JUnit 5 (Jupiter) API + engine (BOM-style single artifact)
+  testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
 }
-```
 
-**Finally, tell Gradle that JUnit is to be used as the testing tool** (and to configure a few aspects of how Gradle handles JUnit tests), as follows:
-
-```groovy {heading="build.gradle"}
 test {
-    useJUnitPlatform()
-
-    testLogging {
-        events "passed", "skipped", "failed"
-
-        showExceptions true
-        exceptionFormat "full"
-        showCauses true
-        showStackTraces true
-        showStandardStreams = false
-    }
+  // Tell Gradle to run JUnit 5 tests
+  useJUnitPlatform()
 }
+
 ```
 
 </div>
-<box type="tip" seamless>
+<box type="tip" seamless> After editing <code>build.gradle</code>, open the **Gradle** tool window and click **Reload All Gradle Projects** (or restart IntelliJ) so the IDE picks up the changes. </box> <panel header="Optional: more verbose test output" peek no-close no-switch> You can add this inside the <code>test { ... }</code> block to see passed/failed/skipped events and full stack traces:
 
-If using an IDE, restart the IDE after updating the `build.gradle` file.
-</box>
+testLogging {
+  events "passed", "skipped", "failed"
+  exceptionFormat "full"
+  showExceptions true
+  showCauses true
+  showStackTraces true
+}
+</panel> <panel header="Using Kotlin DSL? (build.gradle.kts)" peek no-close no-switch> Equivalent Kotlin DSL:
+plugins {
+  java
+}
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  testImplementation("org.junit.jupiter:junit-jupiter:5.10.0")
+}
+
+tasks.test {
+  useJUnitPlatform()
+}
+</panel> </div> ```
 
 <!-- ======================================================== -->
 
