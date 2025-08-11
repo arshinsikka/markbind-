@@ -90,7 +90,7 @@ repositories {
 }
 
 dependencies {
-  // JUnit 5 (Jupiter) API + engine (BOM-style single artifact)
+  // JUnit 5 (Jupiter) API + engine (single artifact)
   testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
 }
 
@@ -98,12 +98,12 @@ test {
   // Tell Gradle to run JUnit 5 tests
   useJUnitPlatform()
 }
-
 ```
 
-</div>
-<box type="tip" seamless> After editing <code>build.gradle</code>, open the **Gradle** tool window and click **Reload All Gradle Projects** (or restart IntelliJ) so the IDE picks up the changes. </box> <panel header="Optional: more verbose test output" peek no-close no-switch> You can add this inside the <code>test { ... }</code> block to see passed/failed/skipped events and full stack traces:
+<box type="tip" seamless> After editing <code>build.gradle</code>, open the 
+**Gradle** tool window and click  **Reload All Gradle Projects** (or restart IntelliJ) so the IDE picks up the changes. </box> <panel header="Optional: more verbose test output" peek no-close no-switch> You can add this inside the <code>test { ... }</code> block to see passed/failed/skipped events and full stack traces:
 
+```groovy
 testLogging {
   events "passed", "skipped", "failed"
   exceptionFormat "full"
@@ -111,7 +111,10 @@ testLogging {
   showCauses true
   showStackTraces true
 }
+```
+
 </panel> <panel header="Using Kotlin DSL? (build.gradle.kts)" peek no-close no-switch> Equivalent Kotlin DSL:
+```kotlin
 plugins {
   java
 }
@@ -127,7 +130,9 @@ dependencies {
 tasks.test {
   useJUnitPlatform()
 }
-</panel> </div> ```
+
+```
+</panel> </div> 
 
 <!-- ======================================================== -->
 
