@@ -269,6 +269,21 @@ To learn how to write useful JUnit test cases, refer [this section](https://se-e
 
 <!-- ======================================================== -->
 
+## Troubleshooting (quick fixes)
+
+- **“No tests found”**  
+  Ensure `test { useJUnitPlatform() }` is in `build.gradle`, test methods use JUnit 5 annotations (`@Test` from `org.junit.jupiter.api`), and your **Run tests using** setting matches your build (Gradle vs IntelliJ). Reimport Gradle.
+- **“Cannot resolve symbol org.junit…”**  
+  Add the JUnit dependency in `dependencies { testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0' }` and reimport Gradle.
+- **Tests run twice**  
+  Disable either IDE delegation or Gradle test running (avoid mixed runners). Check **Build Tools → Gradle** and **Build Tools → Maven** settings if applicable.
+- **Module not specified / Scope issues**  
+  Edit the Run Configuration: pick **All Tests in <module>** or **Class/Package** as needed.
+
+
+
+<!-- ======================================================== -->
+
 ## Resources
 
 * [JUnit 5 User Guide](https://junit.org/junit5/docs/current/user-guide/)
