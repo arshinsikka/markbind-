@@ -58,6 +58,19 @@ Here are the conventions to follow, when using JUnit in a Gradle project:
 
 <div id="add-junit-to-gradle">
 
+<box type="info" seamless>
+
+### Quick pre‑checks (highly recommended)
+
+1. **Project SDK**: In IntelliJ, go to **File → Project Structure → Project**.  
+   - Set **Project SDK** to a valid JDK (e.g., Temurin/Oracle 17).  
+   - Set **Language level** to match your JDK.
+2. **Folder layout**: Ensure your code is in `src/main/java/...` and tests are in `src/test/java/...`.  
+   - If you created a custom folder, right‑click it → **Mark Directory as → Test Sources Root**.
+3. **Package mirroring**: Keep test packages the same as the main packages so package‑private members are accessible during testing.
+</box>
+
+
 ## Configuring Gradle for JUnit
 
 Update the `build.gradle` file to include JUnit as a dependency. Here are the relevant lines that needs to be in the `build.gradle` (change the version number as necessary):
