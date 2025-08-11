@@ -221,6 +221,25 @@ Switch if one runner can’t discover tests. Then **Reload All Gradle Projects**
 
 </div>
 
+<!-- ======================================================== -->
+
+<div id="test-coverage">
+
+## Running with Coverage (IntelliJ)
+
+1. Right‑click a test or class and choose **Run '…' with Coverage** (or use the gutter coverage icon).
+2. Open the **Coverage** tool window to view line coverage and navigate to uncovered lines.
+
+<pic src="images/junit/run-with-coverage.png" />
+<pic src="images/junit/coverage-tool-window.png" />
+
+<box type="info" seamless>
+If you run via Gradle, HTML reports (when enabled) appear at  
+`build/reports/tests/test/index.html`.
+</box>
+
+</div>
+
 
 <!-- ======================================================== -->
 
