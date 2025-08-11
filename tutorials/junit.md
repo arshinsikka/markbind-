@@ -178,13 +178,18 @@ public class DukeTest {
 
 <box type="tip" seamless>
 
-If the above doesn't work, you may want to go to `File` > `Settings` and change the`Run tests using:` setting to `Intellij IDEA` (instead of `Gradle`), as shown below:
+If tests don’t run or get “No tests found”, check **File → Settings → Build, Execution, Deployment → Gradle → Run tests using**:
+
+- **Gradle** (recommended if your project builds with Gradle and uses Gradle tasks in CI), or  
+- **IntelliJ IDEA** (can be simpler for debugging on small projects).
+
+Switch if one runner can’t discover tests. Then **Reload All Gradle Projects**.
 
 <panel header="Expand to see screenshot ..." peek no-close no-switch>
-
-![change Intellij settings to not use Gradle](images/gradle/intellijRunTestsUsingIntellij.png)
+![Change IntelliJ settings to not use Gradle](images/gradle/intellijRunTestsUsingIntellij.png)
 </panel>
 </box>
+
 
 * To run all tests in a folder (e.g., `src/test/java` folder), right-click on the folder, and choose {{ play_button }} `Run Tests in '...'`.
 * Other supported IDEs (e.g., Eclipse, NetBeans, VS Code, etc.) have similar mechanisms.
